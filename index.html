@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Super Castlevania IV - Password Generator</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <!-- link rel="stylesheet" type="text/css" href="style.css" /-->
+</head>
+
+<body>
+    <header>
+        <h1>Super Castlevania IV - Password Generator</h1>
+    </header>
+    <input type="text" id="name_input"></input>
+    <input type="button" value="Generate" onclick="pw.generatePassword($('#name_input').val())"></input>
+    <div id="output_div"></div>
+    
+   
+</body>
+
+</html>
