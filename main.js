@@ -75,11 +75,13 @@ class PasswordGenerator {
         return formatted_string
     }
 
-    generateChecksum(level, name) {
+    generateChecksum(level, difficulty, name) {
+        // 0 for NG, 1 for NG+
         var checksum = [0, 0, 0, 0];
         checksum[0] = level & 0xff;
-        checksum[1] = 0;
-        var i, c = level;
+        checksum[1] = difficulty;
+        var i = level;
+        var c = level + difficulty;
         for (i = 7; i >= 0; i--) {
             c += (name[i] ^ 0xff)
         }
