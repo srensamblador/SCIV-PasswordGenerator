@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "DraculasCurse";
+    src: url(font/draculas-curse.ttf);
+}
+@font-face {
+    font-family: "Gothic";
+    src: url(font/CloisterBlack.ttf);
+}
+html{
+    min-width: 140px;
+}
+
+body{
+    background-color: #262626;
+    color: #f6f6f6;
+}
+
+header{
+    text-align: center;
+}
+
+header img{
+    width: 40%;
+}
+
+h1, h2{
+    text-align: center;
+    font-family: "Gothic";
+}
+
+h1{
+    font-size: 3em;
+    color: #363636;
+    text-shadow: 0 0 0.2em white;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+.input_container{
+    text-align: center;
+}
+
+.quest_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin:auto;
+}
+
+.password_container{
+    flex-basis: 15%;
+    text-align: center;
+    font-family: "Gothic";
+    font-size: 1.2em;
+    margin: 1em;    
+}
+
+.password{
+    border: 1px solid white;
+    min-width: 140px;
+    min-height: 140px;
+    margin: auto;
+}
+
+.password td{
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    width:30px;
+    height:30px;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.password td>img{
+    margin:0;
+    display:block;
+}

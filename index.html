@@ -13,10 +13,13 @@
 
 <body>
     <header>
-        <h1>Super Castlevania IV - Password Generator</h1>
+        <img src="img/logo.png" alt="Logo of Super Castlevania IV"></img>
+        <h1>Password Generator</h1>
     </header>
-    <input type="text" id="name_input"></input>
-    <input type="button" value="Generate" onclick="onClickEvent($('#name_input').val())"></input>
+    <div class='input_container'>
+        <input type="text" id="name_input"></input>
+        <input type="button" value="Generate" onclick="onClickEvent($('#name_input').val())"></input>
+    </div>
     <div id="output_area"></div>
     
    
