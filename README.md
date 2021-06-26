@@ -17,7 +17,7 @@ However, there was not a unique password for each stage. Instead, the password a
 
 
 Password example:  
-![Stage 1 password for the player name SIMON](/img/password_example.jpg?raw=true) 
+![Stage 1 password for the player name SIMON](/img/password_example.JPG?raw=true) 
 
 
 Furthermore, in SCIV when you beat the game, you inmediately start the game in a harder difficulty. This is what is known as the Second Quest (the First Quest would be the base game). This mode includes the password system and as a result, the algorithm takes the difficulty into account. Thus, each player name doesn't have one but two passwords sets, one for each difficulty.
