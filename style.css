@@ -1,9 +1,9 @@
 @font-face {
-    font-family: "DraculasCurse";
-    src: url(font/draculas-curse.ttf);
+    font-family: "Gothic1";
+    src: url(font/EnglishTowne.ttf);
 }
 @font-face {
-    font-family: "Gothic";
+    font-family: "Gothic2";
     src: url(font/CloisterBlack.ttf);
 }
 html{
@@ -11,35 +11,87 @@ html{
 }
 
 body{
-    background-color: #262626;
+    background-color: #0b0b0b;
     color: #f6f6f6;
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom; 
 }
 
 header{
+    margin: 2em 0 5em 0;
+}
+
+header > div{
     text-align: center;
+    margin: auto;
 }
 
 header img{
     width: 40%;
+    min-width: 420px;
+    margin: auto;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align: center;
-    font-family: "Gothic";
-}
-
-h1{
-    font-size: 3em;
-    color: #363636;
-    text-shadow: 0 0 0.2em white;
+    font-family: "Gothic2";
 }
 
 h2{
     margin-bottom: 0;
 }
 
-.input_container{
+.name_entry{
     text-align: center;
+    width: 30%;
+    min-width: 20em;
+    margin: auto;
+    background-color: #111111;
+    box-shadow: 0 0 0 2px rgb(171, 177, 187), inset 0 10px 27px -8px #141414;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.input_container{
+    width: 20em;
+    height: auto;
+    margin: 1em auto;
+    padding: 0.2em;
+    background-image: url("img/name_entry_bg.png");
+    background-size: 26em;
+    background-repeat: repeat;
+    border: 0.2em groove #343434;
+    border-radius: 1em;
+}
+
+
+input[type=text]{
+    font-family: "Gothic1";
+    font-size: 2.8em;
+    color: #0b0b08;
+    font-stretch: extra-expanded;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #747374;
+    margin: 0 0.6em;
+    background: transparent;
+    border-style: none;
+}
+
+input[type=text]:focus{
+    outline:none
+}
+
+#output_area{
+    margin: 5em 0;    
+}
+
+#output_area > h2{
+    font-size: 1.8em;
+    margin: 2em 0 0.5em 0;
+    text-shadow: 2px 2px 0 #111111;
 }
 
 .quest_area{
@@ -47,7 +99,10 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
-    margin:auto;
+    margin: 1em auto;
+    background-color: #111111;
+    box-shadow: 0 0 0 2px rgb(171, 177, 187), inset 0 10px 27px -8px #141414;
+    border-radius: 1em;
 }
 
 .password_container{

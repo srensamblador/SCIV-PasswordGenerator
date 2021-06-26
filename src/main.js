@@ -6,7 +6,6 @@ function onClickEvent(input) {
     $("#output_area").empty();
 
     passwords = pw.generatePasswords(input);
-    console.log(passwords);
 
     difficulties = ["First Quest", "Second Quest"];
     stages = ["Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5",
@@ -14,12 +13,13 @@ function onClickEvent(input) {
             "Stage B", "Slogra", "Gaibon", "Death", "Dracula"]
     for (let i = 0; i < difficulties.length; i++) {
         $("#output_area").append("<h2>" + difficulties[i] + "</h2>");
-        $("#output_area").append("<div class='quest_area' id='quest_" + i+1 +"'></div>")
+        $("#output_area").append("<div class='quest_area' id='quest_" + i+1 +"'>")
         for (let j = 0; j < passwords[i].length; j++) {
             password_table = passwordTable(passwords[i][j]);
             password_container = "<div class='password_container'><h3>" + stages[j] +"</h3>"
             $("#quest_" + i+1).append(password_container + password_table + "</div>");
         }
+        $("output_area").append("</div>");
 
     }
 }
@@ -59,4 +59,17 @@ function passwordTable(password){
     }
     table += "</table>";
     return table;
+}
+
+function validateInput(event){
+    var char = String.fromCharCode(event.which);
+    if (!char.match(/[A-Za-z0-9]+/)){
+        event.preventDefault();
+    };
+}
+
+function keyUpEvent(event){
+    if (event.keyCode == 13){
+        onClickEvent($("#name_input").val())
+    }
 }
