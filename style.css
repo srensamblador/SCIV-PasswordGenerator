@@ -7,7 +7,7 @@
     src: url(font/CloisterBlack.ttf);
 }
 html{
-    min-width: 140px;
+    min-width: 40%;
 }
 
 body{
@@ -29,9 +29,28 @@ header > div{
 }
 
 header img{
-    width: 40%;
+    width: 30%;
     min-width: 420px;
     margin: auto;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #f6f6f6;
+    font-size: 0.8em;
+    background-color: black;
+    padding: 0.5em;    
+}
+
+footer > a{
+    color: #f6f6f6;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 0.5em;
 }
 
 h1, h2, h3{
@@ -66,7 +85,6 @@ h2{
     border-radius: 1em;
 }
 
-
 input[type=text]{
     font-family: "Gothic1";
     font-size: 2.8em;
@@ -82,6 +100,10 @@ input[type=text]{
 
 input[type=text]:focus{
     outline:none
+}
+
+#generate_btn{
+    cursor: pointer;
 }
 
 #output_area{
@@ -134,4 +156,35 @@ input[type=text]:focus{
 .password td>img{
     margin:0;
     display:block;
+}
+
+.modal{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30%;
+    min-width: 420px;
+    height: auto;
+    overflow: auto;
+    background: #111111;
+    color: #f6f6f6;
+    padding: 2em;
+    border: 2px solid #f6f6f6;
+}
+
+.modal>.close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal a{
+    color: white;
 }

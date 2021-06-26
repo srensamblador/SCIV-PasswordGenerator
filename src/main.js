@@ -1,5 +1,5 @@
 
-function onClickEvent(input) {
+function generateOnClick(input) {
     pw = new SCIVGenerator();
 
     // Clear previous output
@@ -9,40 +9,31 @@ function onClickEvent(input) {
 
     difficulties = ["First Quest", "Second Quest"];
     stages = ["Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5",
-            "Stage 6", "Stage 7", "Stage 8", "Stage 9", "Stage A",
-            "Stage B", "Slogra", "Gaibon", "Death", "Dracula"]
+        "Stage 6", "Stage 7", "Stage 8", "Stage 9", "Stage A",
+        "Stage B", "Slogra", "Gaibon", "Death", "Dracula"]
     for (let i = 0; i < difficulties.length; i++) {
         $("#output_area").append("<h2>" + difficulties[i] + "</h2>");
-        $("#output_area").append("<div class='quest_area' id='quest_" + i+1 +"'>")
+        $("#output_area").append("<div class='quest_area' id='quest_" + i + 1 + "'>")
         for (let j = 0; j < passwords[i].length; j++) {
             password_table = passwordTable(passwords[i][j]);
-            password_container = "<div class='password_container'><h3>" + stages[j] +"</h3>"
-            $("#quest_" + i+1).append(password_container + password_table + "</div>");
+            password_container = "<div class='password_container'><h3>" + stages[j] + "</h3>"
+            $("#quest_" + i + 1).append(password_container + password_table + "</div>");
         }
         $("output_area").append("</div>");
 
     }
 }
 
-function textMatrix(password) {
-    var formatted_string = "";
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 4; j++) {
-            formatted_string += password[i * 4 + j] + " ";
-        }
-        formatted_string += "\n";
-    }
-
-    return formatted_string
-}
-
-function passwordTable(password){
+function passwordTable(password) {
+    /*
+        Creates the grid of symbols containing a single password
+    */
     var table = "<table class='password'>";
-    for (let i = 0; i <4; i++){
+    for (let i = 0; i < 4; i++) {
         table += "<tr>";
-        for (let j = 0; j < 4; j++){
+        for (let j = 0; j < 4; j++) {
             table += "<td>"
-            switch (password[i * 4 + j]){
+            switch (password[i * 4 + j]) {
                 case "A":
                     table += "<img src='img/axe.png' alt='Axe'/>";
                     break;
@@ -53,23 +44,39 @@ function passwordTable(password){
                     table += "<img src='img/heart.png' alt='Heart'/>";
                     break;
             }
-            table +="</td>"
+            table += "</td>"
         }
-        table +="</tr>";        
+        table += "</tr>";
     }
     table += "</table>";
     return table;
 }
 
-function validateInput(event){
+function validateInput(event) {
+    /*
+         Prevents the user from inputting invalid characters, even if the generator would ignore them.
+    */
     var char = String.fromCharCode(event.which);
-    if (!char.match(/[A-Za-z0-9]+/)){
+    if (!char.match(/[A-Za-z0-9]+/)) {
         event.preventDefault();
     };
 }
 
-function keyUpEvent(event){
-    if (event.keyCode == 13){
-        onClickEvent($("#name_input").val())
+function keyUpEvent(event) {
+    /*
+    Generate button accepts Enter key
+    */
+    if (event.keyCode == 13) {
+        generateOnClick($("#name_input").val())
     }
+}
+
+// Info modals
+function modalOnClick(modal) {
+    $(".modal").hide();
+    $("#"+modal).show();
+}
+
+function closeModalOnClick() {
+    $(".modal").hide();
 }

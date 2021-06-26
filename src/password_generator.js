@@ -25,7 +25,7 @@ class SCIVGenerator {
 
     encode(name, difficulty, area) {
         /*
-            Generates a singular password for the given parameters
+            Generates a single password for the given parameters
             The resulting password is an array of 16 elements, each of them being a symbol of the grid, starting left to right, top to bottom.
         */
         name = name.toLowerCase()
