@@ -1,5 +1,5 @@
 # Super Castlevania IV - Password Generator
-[Website](https://srensamblador.github.io/SCIV-PasswordGenerator/)
+[Go to the generator](https://srensamblador.github.io/SCIV-PasswordGenerator/)
 
 ## What is Super Castlevania IV?
 Super Castlevania IV is a 1991 game developed by Konami for the Super Nintendo Entertainment System (SNES) and the fourth entry in the mainline Castlevania
@@ -16,12 +16,8 @@ Each password would load the game in a different stage.
 However, there was not a unique password for each stage. Instead, the password algorithm takes into account the name given by the player when he or she started the game. Therefore, each possible name might have a different password set.
 
 
-<center>
-<figure>
-<img src="/img/password_example.jpg?raw=true" alt="Stage 1 password for the player name SIMON">
-<figcaption>Stage 1 password for the player name SIMON</figcaption>
-</figure>
-</center>
+Password example:  
+![Stage 1 password for the player name SIMON](/img/password_example.JPG?raw=true) 
 
 
 Furthermore, in SCIV when you beat the game, you inmediately start the game in a harder difficulty. This is what is known as the Second Quest (the First Quest would be the base game). This mode includes the password system and as a result, the algorithm takes the difficulty into account. Thus, each player name doesn't have one but two passwords sets, one for each difficulty.
