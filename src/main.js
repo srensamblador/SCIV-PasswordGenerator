@@ -75,8 +75,10 @@ function keyUpEvent(event) {
 function modalOnClick(modal) {
     $(".modal").hide();
     $("#"+modal).show();
+    $("body").css("overflow", "hidden");
 }
 
 function closeModalOnClick() {
     $(".modal").hide();
+    $("body").css("overflow", "auto");
 }
