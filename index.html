@@ -23,7 +23,7 @@
         <h2>ENTER YOUR NAME</h2>
         <div class='input_container'>
             <input type="text" id="name_input" maxlength="8" onkeypress="validateInput(event)"
-                title="Up to 8 alphanumerical characters." onkeyup="keyUpEvent(event)"></input>
+                title="Up to 8 alphanumeric characters. Spaces are allowed." onkeyup="keyUpEvent(event)"></input>
         </div>
         <a id="generate_btn" onclick="generateOnClick($('#name_input').val())"><img src="img/generate-btn.png"/></a>
     </div>
@@ -48,7 +48,7 @@
         </p>
         <p>
             This website generates all of the passwords belonging to a given player name. Note that the player name must be composed of up
-            to 8 alphanumeric characters, no symbols whatsoever.
+            to 8 alphanumeric characters. Spaces are also allowed.
         </p>
     </div>
 

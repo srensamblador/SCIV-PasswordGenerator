@@ -55,9 +55,10 @@ function passwordTable(password) {
 function validateInput(event) {
     /*
          Prevents the user from inputting invalid characters, even if the generator would ignore them.
+         Only space and alphanumeric characters are allowed.
     */
     var char = String.fromCharCode(event.which);
-    if (!char.match(/[A-Za-z0-9]+/)) {
+    if (!char.match(/[A-Za-z0-9\s]+/)) {
         event.preventDefault();
     };
 }
