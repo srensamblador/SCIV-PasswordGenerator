@@ -25,7 +25,7 @@
             <input type="text" id="name_input" maxlength="8" onkeypress="validateInput(event)"
                 title="Up to 8 alphanumeric characters. Spaces are allowed." onkeyup="keyUpEvent(event)"></input>
         </div>
-        <a id="generate_btn" onclick="generateOnClick($('#name_input').val())"><img src="img/generate-btn.png"/></a>
+        <a id="generate_btn" onclick="generateOnClick($('#name_input').val())"><img src="img/generate-btn.png" /></a>
     </div>
 
     <div id="output_area"></div>
@@ -54,30 +54,34 @@
 
     <div id="attributions_modal" class="modal">
         <span class="close" onclick="closeModalOnClick()">&times;</span>
-        <h2>Attributions</h2>
-        <p>
-            The sprites used as well as the background are from Super Castlevania IV, published and developed by Konami.
-        </p>
-        <p>
-            The fonts utilized are the following:
-        </p>
-        <ul>
-            <li><em>Cloister Black</em>, by <a href="http://www.steffmann.de/wordpress/">Dieter Steffmann</a></li>
-            <li><em>EnglishTowne</em>, by <a href="http://www.steffmann.de/wordpress/">Dieter Steffmann</a></li>
-        </ul>
-        <p>
-            And finally, special thanks to <a href="https://www.romhacking.net/community/400/">TFG</a> from <a href="https://www.romhacking.net/">romhacking.net</a>, who laid
-            the groundwork of the password generation, only excluding the Second Quest passwords.
-        </p>
+        <div class="modal_content">
+            <h2>Attributions</h2>
+            <p>
+                The sprites used as well as the background are from Super Castlevania IV, published and developed by
+                Konami.
+            </p>
+            <p>
+                The fonts utilized are the following:
+            </p>
+            <ul>
+                <li><em>Cloister Black</em>, by <a href="http://www.steffmann.de/wordpress/">Dieter Steffmann</a></li>
+                <li><em>EnglishTowne</em>, by <a href="http://www.steffmann.de/wordpress/">Dieter Steffmann</a></li>
+            </ul>
+            <p>
+                And finally, special thanks to <a href="https://www.romhacking.net/community/400/">TFG</a> from <a
+                    href="https://www.romhacking.net/">romhacking.net</a>, who laid
+                the groundwork of the password generation, only excluding the Second Quest passwords.
+            </p>
+        </div>
     </div>
     <footer>
-        · 
+        ·
         <a href="https://github.com/srensamblador/SCIV-PasswordGenerator">Github</a>
-        · 
+        ·
         <a id="about_btn" onclick="modalOnClick('about_modal')">About</a>
-        · 
-         <a id="about_btn" onclick="modalOnClick('attributions_modal')">Attributions</a>
-        · 
+        ·
+        <a id="about_btn" onclick="modalOnClick('attributions_modal')">Attributions</a>
+        ·
     </footer>
 
 </body>
