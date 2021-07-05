@@ -6,9 +6,6 @@
     font-family: "Gothic2";
     src: url(font/CloisterBlack.ttf);
 }
-html{
-    min-width: 40%;
-}
 
 body{
     background-color: #0b0b0b;
@@ -29,8 +26,8 @@ header > div{
 }
 
 header img{
-    width: 30%;
-    min-width: 420px;
+    max-width: 100%;
+    width: 35%;
     margin: auto;
 }
 
@@ -64,14 +61,14 @@ h2{
 
 .name_entry{
     text-align: center;
-    width: 30%;
-    min-width: 20em;
+    max-width: 25em;
     margin: auto;
     background-color: #111111;
     box-shadow: 0 0 0 2px rgb(171, 177, 187), inset 0 10px 27px -8px #141414;
     border-radius: 2em;
     padding: 1em;
 }
+
 
 .input_container{
     width: 20em;
@@ -86,14 +83,15 @@ h2{
 }
 
 input[type=text]{
+    width:100%;
     font-family: "Gothic1";
-    font-size: 2.8em;
+    font-size: 2.5em;
+    text-align: center;
     color: #0b0b08;
     font-stretch: extra-expanded;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 #747374;
-    margin: 0 0.6em;
     background: transparent;
     border-style: none;
 }
@@ -165,26 +163,68 @@ input[type=text]:focus{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    min-width: 420px;
+    width: 40%;
+    min-width: 35%;
     height: auto;
     overflow: auto;
     background: #111111;
     color: #f6f6f6;
-    padding: 2em;
+    padding: 1em;
     border: 2px solid #f6f6f6;
 }
 
+.modal_content{
+    float: right;
+    margin: 0 1em 1em 1em;
+}
+
 .modal>.close{
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    float: right;
+    padding: 2px 5px;
+    cursor:pointer;
+    font-size: 1.8em;
+    font-weight: bold;
+    /*position: absolute;
+    top: 5%;
+    right: 5%;
     margin: auto;
     font-size: 2em;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer;*/
+}
+
+.modal>.close:hover{
+    background-color: #747374;
 }
 
 .modal a{
     color: white;
+}
+
+
+@media only screen and (max-width: 600px){
+    header img{
+        width: 80%;
+    }
+    
+    .name_entry{
+        min-width: 90%;
+    }
+
+    .input_container{
+        width: 90%;
+    }
+
+    .modal{
+        width: 75%;
+        height: 75%;
+        overflow-y: hidden;
+    }
+
+    .modal_content{
+        height: 100%;
+        max-width: 95%;
+        overflow-y: auto;
+        font-size: 0.9em;
+    }
 }
